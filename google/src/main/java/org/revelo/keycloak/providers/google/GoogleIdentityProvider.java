@@ -1,4 +1,4 @@
-package org.revelo.keycloak.google.provider;
+package org.revelo.keycloak.providers.google;
 
 import org.keycloak.OAuth2Constants;
 import org.keycloak.broker.oidc.OIDCIdentityProvider;

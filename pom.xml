@@ -1,58 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.revelo.keycloak</groupId>
-  <artifactId>keycloak-google-provider</artifactId>
+  <groupId>org.revelo</groupId>
+  <artifactId>revelo-keycloak-providers</artifactId>
+  <packaging>pom</packaging>
   <version>1.0.0</version>
-  <packaging>jar</packaging>
 
-  <name>Custom Google Identity Provider for Keycloak</name>
-  <description>A custom Identity Provider for Keycloak with special features</description>
-  <url>https://github.com/contratadome/keycloak-google-provider</url>
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
+  <name>Custom Providers for Keycloak</name>
+  <url>https://github.com/contratadome/revelo-keycloak-providers</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <keycloak.version>20.0.5</keycloak.version>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-core</artifactId>
-      <version>${keycloak.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-services</artifactId>
-      <version>${keycloak.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi</artifactId>
-      <version>${keycloak.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi-private</artifactId>
-      <version>${keycloak.version}</version>
-    </dependency>
-      <dependency>
-          <groupId>org.jetbrains</groupId>
-          <artifactId>annotations</artifactId>
-          <version>RELEASE</version>
-          <scope>compile</scope>
-      </dependency>
-  </dependencies>
+  <modules>
+    <module>google</module>
+  </modules>
 
   <build>
     <defaultGoal>clean install</defaultGoal>

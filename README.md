@@ -1,22 +1,22 @@
 # Keycloak - Google Auth Provider
 
-This project was developed to provide some features that are not available in the default Keycloak Google Social Auth Provider.
+Providers are extensions that allow us to customize and extend Keycloak's capabilities. 
+They are implemented as Java classes that are packaged as JAR files and deployed to the `providers` directory of the Keycloak server.
 
-- `Hosted Domain` validation: It tells to Google to display only the accounts that are part of the specified domain. It accepts a list of domains separated by comma or the `*` character to allow any domain.
+## Providers available in this repository
+- [Google Provider](./google/README.md)
 
-- `Denied Domain` validation: It verifies if the user's email is not part of the specified domain. It accepts a list of domains separated by comma. The authentication will fail if the user's email is part of any of the specified domains.
-
-![Provider config sample](img/sample.png)
 
 ## Development
 
-This provider was developed using:
+It was developed using:
 - OpenJDK 11.0.17
 - Maven 3.9.3
 
 *We recommend using the same versions to avoid any issues.*
 
 To make it easier to get started, we suggest using [ASDF](https://asdf-vm.com/#/core-manage-asdf-vm) to manage your Java and Maven versions.
+
 
 ## Build
 
@@ -25,8 +25,17 @@ To build the provider binary clone the repository and run the following command:
 ```bash
 mvn clean install
 ```
-*The `jar` file will be created in the `target` directory.*
 
+The `jar` file will be created in the `target` directory of each provider. Example:
+
+```
+google
+├── src
+├── target
+│   ├── keycloak-google-provider-1.0.0.jar  <--- JAR file
+├── README.md
+├── pom.xml
+```
 
 ## References
 Keycloak Documentation

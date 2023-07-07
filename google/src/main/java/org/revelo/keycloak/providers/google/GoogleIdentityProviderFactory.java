@@ -1,4 +1,4 @@
-package org.revelo.keycloak.google.provider;
+package org.revelo.keycloak.providers.google;
 
 import org.keycloak.broker.provider.AbstractIdentityProviderFactory;
 import org.keycloak.broker.social.SocialIdentityProviderFactory;
